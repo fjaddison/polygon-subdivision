@@ -18,8 +18,6 @@ function draw() {
     beginShape()
     start.forEach(p => vertex(p.x, p.y))
     endShape(CLOSE)
-    let center = centroid(start)
-    point(center.x, center.y)
     let subPoints = subdivide(start)
     drawSubdivision(subPoints)
     noLoop()
